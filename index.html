@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata of the Webpage -->
+  <!-- Character-set Metadata -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Viewport Metadata -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Description Metadata-->
+  <meta name="description"
+    content="Ghanendra Chakradhari — AI/ML Student, Aspiring Machine Learning Engineer, and AI Enthusiast. Explore my projects, certifications, and achievements." />
+  <!-- Author Metadata -->
+  <meta name="author" content="Ghanendra Chakradhari" />
+  <!-- Keyword Metadata -->
+  <meta name="keywords"
+    content="Ghanendra Chakradhari, AI ML Student, Machine Learning Engineer, AI Enthusiast, Dog Cat Classifier, Forty.Fetch, Agentic AI Finance, SIH 2025, HackSprint, Google Cloud MLOps" />
+  <!-- Webpage Logo -->
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+  <!-- Webpage Title -->
+  <title>Ghanendra Chakradhari</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Import CSS: Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+
+  <!-- Extra inline overrides for new sections -->
+  <style>
+    /* ── Global font override ── */
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── Typed-text cursor blink ── */
+    .typed-cursor {
+      font-weight: 300;
+      color: #ffffff;
+    }
+
+    /* ── Intro tag-line ── */
+    .site-tagline {
+      display: block;
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 0.4rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── CTA buttons in hero ── */
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.4rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      padding: 0.55rem 1.4rem;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      letter-spacing: 0.04em;
+    }
+
+    .cta-btn.primary {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1.5px solid rgba(255, 255, 255, 0.6);
+      color: #fff;
+      backdrop-filter: blur(6px);
+    }
+
+    .cta-btn.primary:hover {
+      background: rgba(255, 255, 255, 0.32);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .cta-btn.secondary {
+      background: transparent;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .cta-btn.secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.7);
+      transform: translateY(-2px);
+    }
+
+    .cta-btn.resume {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      color: #1a1a2e;
+      font-weight: 600;
+    }
+
+    .cta-btn.resume:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+    }
+
+    /* ── Achievements & Certifications shared card styles ── */
+    #experience,
+    #certifications {
+      background: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    #experience h1,
+    #certifications h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    #experience h1::after,
+    #certifications h1::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 2px;
+      margin: 0.5rem auto 0;
+    }
+
+    .cards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4rem;
+      justify-content: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Achievement card */
+    .achievement-card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      border: 1px solid #e0e4ee;
+      border-radius: 14px;
+      padding: 1.6rem 2rem;
+      width: 320px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .achievement-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, #667eea, #764ba2);
+      border-radius: 4px 0 0 4px;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(102, 126, 234, 0.18);
+    }
+
+    .achievement-card .badge {
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .achievement-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin: 0 0 0.3rem;
+    }
+
+    .achievement-card p {
+      font-size: 0.82rem;
+      color: #666;
+      margin: 0;
+    }
+
+    /* Certification card */
+    .cert-card {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 1px solid rgba(102, 126, 234, 0.3);
+      border-radius: 14px;
+      padding: 1.6rem 2rem;
+      width: 420px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cert-card::after {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(102, 126, 234, 0.15), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(102, 126, 234, 0.25);
+    }
+
+    .cert-card .cert-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .cert-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e0e6ff;
+      margin: 0 0 0.3rem;
+    }
+
+    .cert-card p {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin: 0 0 1rem;
+    }
+
+    .cert-link {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 20px;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.25s;
+    }
+
+    .cert-link:hover {
+      opacity: 0.85;
+    }
+
+    /* ── Project cards — override original layout with modern cards when no image ── */
+    .project-card-modern {
+      background: #fff;
+      border: 1px solid #e4e8f0;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 300px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card-modern::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+    }
+
+    .project-card-modern:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(102, 126, 234, 0.15);
+    }
+
+    .project-card-modern .proj-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-card-modern h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 0 0 0.5rem;
+    }
+
+    .project-card-modern p {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.6;
+      margin: 0 0 1.2rem;
+    }
+
+    .proj-links {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .proj-link-btn {
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.76rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .proj-link-btn.demo {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      color: #fff;
+    }
+
+    .proj-link-btn.demo:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .proj-link-btn.github {
+      background: #1a1a2e;
+      color: #e0e6ff;
+      border: 1px solid rgba(102, 126, 234, 0.3);
+    }
+
+    .proj-link-btn.github:hover {
+      background: #2d2d52;
+      transform: translateY(-1px);
+    }
+
+    /* ── Projects card wrapper ── */
+    .projects-cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      justify-content: center;
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* ── Tech stack icons refresh ── */
+    .tech h2 {
+      color: #1a1a2e;
+      white-space: nowrap;
+      font-size: 1.3rem;
+    }
+
+    /* ── Footer refresh ── */
+    .footer p {
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ════════════════════════════════════════
+         HERO / HEADER SECTION  (particles.js)
+    ════════════════════════════════════════ -->
+  <div id="particles-js">
+    <div class="header">
+      <h1>
+        <span class="site-title">GHANENDRA CHAKRADHARI</span>
+        <span class="site-description">AI/ML Student &bull; Aspiring ML Engineer &bull; AI Enthusiast</span>
+        <span class="site-tagline">Building intelligent systems and exploring the future of AI.</span>
+      </h1>
+
+      <!-- Social icons -->
+      <div class="header-icons">
+        <a aria-label="My LinkedIn Profile" target="_blank"
+          href="https://www.linkedin.com/in/ghanendra-chakradhari-28580a380/">
+          <i class="icon fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a aria-label="My Github Profile" target="_blank" href="https://github.com/ghanenxra">
+          <i class="icon fa fa-github-alt" aria-hidden="true"></i>
+        </a>
+        <a aria-label="Send Email" href="mailto:pureghanendra@gmail.com" target="_blank">
+          <i class="icon fa fa-envelope"></i>
+        </a>
+        <a aria-label="My Resume" target="_blank" href="https://drive.google.com/file/d/1EzLRdAFW9PK5q7uiMP54ZoToUTPnCZ5O/view?usp=sharing">
+          <i class="icon fa fa-file-text" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- CTA buttons -->
+      <div class="hero-cta">
+        <a class="cta-btn primary" href="#projects" data-scroll>🚀 View Projects</a>
+        <a class="cta-btn secondary" href="mailto:pureghanendra@gmail.com">✉️ Contact Me</a>
+      </div>
+
+      <!-- Nav links -->
+      <div class="header-links">
+        <a class="link" href="#about" data-scroll>About Me</a>
+        <a class="link" href="#projects" data-scroll>Projects</a>
+        <a class="link" href="#experience" data-scroll>Achievements</a>
+        <a class="link" href="#certifications" data-scroll>Certifications</a>
+      </div>
+    </div>
+    <a class="down" href="#about" data-scroll>
+      <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- ════════════════════════════════════════
+         ABOUT SECTION
+    ════════════════════════════════════════ -->
+  <section id="about">
+    <!-- User Introduction -->
+    <div class="user-details">
+      <h1>My Story</h1>
+      <div style="width:160px; height:160px; border-radius:50%; overflow:hidden; margin:1.2rem auto;">
+        <img
+          src="./assets/img/jpg/Professional-Picture-Me.jpg"
+          alt="Ghanendra Chakradhari"
+          style="width:100%; height:100%; object-fit:cover; display:block;"
+        />
+      </div>
+      <p>
+        Hey! I'm Ghanendra — an AI/ML student genuinely excited about the potential of intelligent systems
+        to solve real-world problems. I spend most of my time diving into machine learning algorithms,
+        experimenting with AI models, and keeping up with the fast-moving world of emerging tech.
+        Whether it's training a classifier, building an agentic workflow, or contributing to open-source,
+        I'm always looking for the next thing to learn and build. My goal is to grow into a Machine Learning
+        Engineer who not only writes good models but ships solutions that actually matter.
+      </p>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="user">
+      <!-- Languages -->
+      <div class="tech">
+        <h2>Languages</h2>
+        <img height="50" width="50" src="https://simpleicons.org/icons/python.svg" title="Python" style="margin:5px" />
+        <img height="50" width="50"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript"
+          style="margin:5px" />
+        <img height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="C"
+          style="margin:5px" />
+        <img height="50" width="50"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++"
+          style="margin:5px" />
+        <p>My favorite languages for systems programming, software engineering, and data analysis.</p>
+      </div>
+
+      <!-- ML / AI Libraries -->
+      <div class="tech">
+        <h2>AI / ML</h2>
+        <img height="50" width="50" src="https://cdn.simpleicons.org/tensorflow/FF6F00" title="TensorFlow"
+          style="margin:5px" />
+        <img height="50" width="50" src="https://cdn.simpleicons.org/pytorch/EE4C2C" title="PyTorch"
+          style="margin:5px" />
+        <img height="50" width="50" src="https://cdn.simpleicons.org/opencv/5C3EE8" title="OpenCV" style="margin:5px" />
+        <img height="50" width="50" src="https://cdn.simpleicons.org/scikitlearn/F7931E" title="scikit-learn"
+          style="margin:5px" />
+        <p>My core stack for building, training, and evaluating machine learning models.</p>
+      </div>
+
+      <!-- Cloud & MLOps -->
+      <div class="tech">
+        <h2>Cloud &amp; MLOps</h2>
+        <img height="50" width="50" src="https://cdn.simpleicons.org/googlecloud/4285F4" title="Google Cloud"
+          style="margin:5px" />
+        <img height="50" width="50" src="https://cdn.simpleicons.org/docker/2496ED" title="Docker" style="margin:5px" />
+        <img height="50" width="50" src="https://cdn.simpleicons.org/kubernetes/326CE5" title="Kubernetes"
+          style="margin:5px" />
+        <img height="50" width="50" src="https://cdn.simpleicons.org/mlflow/0194E2" title="MLflow" style="margin:5px" />
+        <p>Tools I use for deploying, scaling, and managing ML workflows in the cloud.</p>
+      </div>
+
+      <!-- Dev Tools -->
+      <div class="tech">
+        <h2>Dev Tools</h2>
+        <img height="50" width="50" src="https://cdn.simpleicons.org/github/181717" title="GitHub" style="margin:5px" />
+        <img height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+          title="VS Code" style="margin:5px" />
+        <img height="50" width="50" src="https://cdn.simpleicons.org/git/F05032" title="Git" style="margin:5px" />
+        <img height="50" width="50" src="https://antigravity.google/assets/image/antigravity-logo.png"
+          title="Antigravity" style="margin:5px" />
+        <p>My everyday environment for coding, experimenting, and version control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+         PROJECTS SECTION
+    ════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="user-details">
+      <h1>Featured Projects</h1>
+    </div>
+
+    <div class="projects-cards-wrapper">
+
+      <!-- Project 1: Dog vs Cat Classifier -->
+      <div class="project-card-modern">
+        <div class="proj-icon">🐶🐱</div>
+        <h3>Dog vs Cat Classifier</h3>
+        <p>
+          A machine learning model that classifies images of dogs and cats with high accuracy.
+          Built using deep learning techniques and deployed as an interactive Hugging Face Space.
+        </p>
+        <div class="proj-links">
+          <a class="proj-link-btn demo" target="_blank"
+            href="https://huggingface.co/spaces/Ghanupro/Dog-Cat-Classifier">
+            🤗 Live Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2: Forty.Fetch -->
+      <div class="project-card-modern">
+        <div class="proj-icon">📥</div>
+        <h3>Forty.Fetch</h3>
+        <p>
+          A clean and efficient tool for downloading YouTube videos. Built for speed, simplicity,
+          and reliability — no fluff, just downloads.
+        </p>
+        <div class="proj-links">
+          <a class="proj-link-btn github" target="_blank" href="https://github.com/ghanenxra/Forty.Fetch">
+            ⭐ GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3: Agentic AI Finance System -->
+      <div class="project-card-modern">
+        <div class="proj-icon">🤖💰</div>
+        <h3>Agentic AI Finance System</h3>
+        <p>
+          An AI-powered finance system built using agentic workflows. A team project that leverages
+          multi-agent orchestration to analyze financial data and generate insights autonomously.
+        </p>
+        <div class="proj-links">
+          <a class="proj-link-btn github" target="_blank" href="https://github.com/mks19992019-sudo/AgenticFinance">
+            ⭐ GitHub
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+         ACHIEVEMENTS / EXPERIENCE SECTION
+    ════════════════════════════════════════ -->
+  <section id="experience">
+    <h1>Achievements &amp; Experience</h1>
+    <div class="cards-grid">
+
+      <div class="achievement-card">
+        <div class="badge">🏆</div>
+        <h3>SIH 2025 — Smart India Hackathon</h3>
+        <p>Participated in one of India's largest national hackathons, building innovative solutions under intense time
+          pressure.</p>
+      </div>
+
+      <div class="achievement-card">
+        <div class="badge">⚡</div>
+        <h3>HackSprint — National Hackathon</h3>
+        <p>Competed in HackSprint, collaborating with teams to prototype real-world solutions in a fast-paced
+          environment.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+         CERTIFICATIONS SECTION
+    ════════════════════════════════════════ -->
+  <section id="certifications">
+    <h1>Certifications</h1>
+    <div class="cards-grid">
+
+      <div class="cert-card">
+        <div class="cert-icon">☁️</div>
+        <h3>Google Cloud — MLOps for Generative AI</h3>
+        <p>Issued by Google · Covers MLOps pipelines, model deployment, and Generative AI on Google Cloud.</p>
+        <a class="cert-link" target="_blank"
+          href="https://www.skills.google/public_profiles/f9a4e219-e821-4797-b2cb-69dc0f2a1c3e/badges/21685934">
+          View Badge ↗
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════ -->
+  <footer class="footer">
+    <p>&copy; Ghanendra Chakradhari, 2026 &nbsp;·&nbsp;
+      <a href="mailto:pureghanendra@gmail.com" style="color:inherit;">pureghanendra@gmail.com</a>
+    </p>
+  </footer>
+
+  <!-- Import JS: Particles Theme -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Import JS: Sweet Scroll -->
+  <script src="./assets/js/sweet-scroll.min.js"></script>
+  <!-- Import JS: Main Script -->
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
