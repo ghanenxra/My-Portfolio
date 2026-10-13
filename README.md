@@ -1,6 +1,6 @@
 # 🚀 Ghanendra Chakradhari — My Portfolio
 
-> AI/ML Student · Aspiring Machine Learning Engineer · AI Enthusiast
+> Machine Learning Engineer · Applied AI & Systems Developer
 
 A clean, modern personal portfolio website built with vanilla HTML, CSS, and JavaScript — featuring a particle animation hero, smooth scrolling, and responsive card-based sections.
 
